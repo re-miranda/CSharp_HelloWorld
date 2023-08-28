@@ -1,0 +1,47 @@
+﻿<Window x:Class="DemoProjectByRmiranda.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoProjectByRmiranda"
+        mc:Ignorable="d"
+        Title="Demo login Window" Height="450" Width="800">
+    <StackPanel Orientation="Horizontal"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="10">
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Welcome to my Demo Project"
+                       FontSize="28"
+                       Margin="0,0,0,20"
+                       HorizontalAlignment="Center"/>
+
+            <TextBox Grid.Row="1"
+                     VerticalAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     Style="{StaticResource ModernTextbox}"
+                     GotFocus="TypingTrigger"
+                     KeyDown="OnKeyDownHandler">
+            </TextBox>
+
+            <TextBlock Text="Cool I can detect you clicked the box! The answer is 42, by the way."
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       Margin="20"
+                       Foreground="ForestGreen"
+                       Name="AnswerTextBlock"
+                       Visibility="Hidden">
+            </TextBlock>
+        </Grid>
+    </StackPanel>
+</Window>
